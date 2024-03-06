@@ -34,7 +34,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Linecast(
             bc.bounds.center,
-            bc.bounds.center + new Vector3(distanceDetection, 0, 0)
+            bc.bounds.center + new Vector3(distanceDetection, 0, 0),obstaclesLayer
         );
 
         return hit.collider != null;
